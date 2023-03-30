@@ -39,7 +39,7 @@ function sendFocus() {
 function filterText() {
   let searchTerm = document.getElementById("filter-text-val").value.trim().toLowerCase();
 
-  if (searchTerm === "naruto") {
+  if (searchTerm === "Naruto") {
     document.getElementById("answer-box").innerHTML = "";
 
     let animeRecommendations = [
@@ -68,6 +68,21 @@ function filterText() {
       tempDiv.innerHTML = answerBoxTemplate(row.title, row.descr);
       document.getElementById("answer-box").appendChild(tempDiv);
     });
+    if (searchTerm === "naruto") {
+    document.getElementById("answer-box").innerHTML = "";
+
+    let animeRecommendations = [
+      { title: "Naruto: Takigakure no Shitou - Ore ga Eiyuu Dattebayo!", descr: "After safely escorting the cowardly Takigakure leader Shibuki to his homeland, Naruto Uzumaki, Sasuke Uchiha, and Sakura Haruno are taken aback by the village's sudden invasion of rogue ninjas. As their teacher Kakashi Hatake had departed for Konohagakure beforehand, the team is left to deal with the attacking forces on their own." },
+      { title: "Utawarerumono", descr: "An injured man is found in the woods by a girl named Eruruu, and everything about him is mysterious. Without knowledge of his past nor even his own name, he is welcomed to Eruruu's home and is given the name Hakuoro by her grandmother, and younger sister, Aruruu. While the inhabitants of the village have large ears and tails, Hakuoro's defining physical trait is quite different as he has neither ears nor tail, but only a mask that he cannot remove." },
+      { title: "Naruto Movie 2: Dai Gekitotsu! Maboroshi no Chiteiiseki Dattebayo!", descr: "In a tumultuous effort, the Sunagakure ninjas attempt to repel an unforeseen invasion of mysterious armored warriors on the Land of Wind. Shortly afterwards, the same armored troops led by Temujin—a skilled knight of impressive power—ambush Naruto Uzumaki, Sakura Haruno, and Shikamaru Nara, who are on a mission to recover a lost ferret. Naruto and Temujin engage in a fierce fight that ends with both of them falling off a cliff." }
+    ];
+
+    animeRecommendations.forEach((row) => {
+      let tempDiv = document.createElement("div");
+      tempDiv.innerHTML = answerBoxTemplate(row.title, row.descr);
+      document.getElementById("answer-box").appendChild(tempDiv);
+    });
+  } 
   }else {
     document.getElementById("answer-box").innerHTML = "";
   }
