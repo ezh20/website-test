@@ -54,7 +54,7 @@ function filterText() {
       document.getElementById("answer-box").appendChild(tempDiv);
     });
   } 
-    if (searchTerm === "cowboy bebop") {
+  if (searchTerm === "cowboy bebop") {
     document.getElementById("answer-box").innerHTML = "";
 
     let animeRecommendations = [
@@ -68,7 +68,7 @@ function filterText() {
       tempDiv.innerHTML = answerBoxTemplate(row.title, row.descr);
       document.getElementById("answer-box").appendChild(tempDiv);
     });
-    if (searchTerm === "naruto") {
+  else if (searchTerm === "naruto") {
     document.getElementById("answer-box").innerHTML = "";
 
     let animeRecommendations = [
