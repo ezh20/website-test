@@ -39,7 +39,8 @@ function sendFocus() {
 function filterText() {
   let searchTerm = document.getElementById("filter-text-val").value.trim().toLowerCase();
 
-      if (searchTerm === "naruto uzamaki") {
+  if (searchTerm === "naruto") {
+    document.getElementById("answer-box").innerHTML = "";
 
     let animeRecommendations = [
       { title: "Naruto: Takigakure no Shitou - Ore ga Eiyuu Dattebayo!", descr: "After safely escorting the cowardly Takigakure leader Shibuki to his homeland, Naruto Uzumaki, Sasuke Uchiha, and Sakura Haruno are taken aback by the village's sudden invasion of rogue ninjas. As their teacher Kakashi Hatake had departed for Konohagakure beforehand, the team is left to deal with the attacking forces on their own." },
@@ -52,8 +53,8 @@ function filterText() {
       tempDiv.innerHTML = answerBoxTemplate(row.title, row.descr);
       document.getElementById("answer-box").appendChild(tempDiv);
     });
-  } 
-    if (searchTerm === "cowboy bebop") {
+  } else if (searchTerm === "cowboy bebop") {
+    document.getElementById("answer-box").innerHTML = "";
 
     let animeRecommendations = [
       { title: "Seihou Bukyou Outlaw Star", descr: "Gene Starwind has always dreamed of piloting his own ship out into the vast sea of stars. Unfortunately, not all dreams come true, as he spends his days working odd jobs alongside his partner, James Hawking, on the small planet Sentinel III instead. However, this all takes a turn when the duo takes on a job from Rachel Sweet who, unbeknownst to them, is actually a treasure-hunting outlaw. Tasked with protecting a mysterious girl known as Melfina, the meeting irrevocably changes the pair's lives as they are sent out into the great unknown aboard the highly advanced ship, Outlaw Star." },
@@ -66,7 +67,8 @@ function filterText() {
       tempDiv.innerHTML = answerBoxTemplate(row.title, row.descr);
       document.getElementById("answer-box").appendChild(tempDiv);
     });
-
+  } else {
+    document.getElementById("answer-box").innerHTML = "";
   }
 }
 
